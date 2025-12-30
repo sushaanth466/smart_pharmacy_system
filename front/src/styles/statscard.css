@@ -1,0 +1,42 @@
+/* 3D card wrapper */
+.stat-card-3d {
+  background: linear-gradient(145deg, #1f2937, #111827);
+  border-radius: 16px;
+  padding: 20px;
+  color: #ffffff;
+
+  /* Fake 3D depth */
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transform-style: preserve-3d;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Hover = 3D illusion */
+.stat-card-3d:hover {
+  transform: perspective(1000px)
+             rotateX(6deg)
+             rotateY(-6deg)
+             translateY(-6px);
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Title text */
+.stat-card-title {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Value text */
+.stat-card-value {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 8px;
+}

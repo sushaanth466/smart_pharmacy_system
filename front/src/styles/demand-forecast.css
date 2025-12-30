@@ -1,0 +1,119 @@
+/* ===== KPI ORBS ===== */
+.kpi-orbs {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.orb {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.06);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.6),
+    inset 0 1px 1px rgba(255,255,255,0.2);
+
+  transform: perspective(800px) rotateX(12deg);
+}
+
+.orb span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.orb b {
+  font-size: 26px;
+  margin-top: 4px;
+}
+
+.orb.blue { box-shadow: 0 0 40px rgba(56,189,248,0.6); }
+.orb.purple { box-shadow: 0 0 40px rgba(139,92,246,0.6); }
+.orb.green { box-shadow: 0 0 40px rgba(34,197,94,0.6); }
+
+.orb.critical { box-shadow: 0 0 50px rgba(239,68,68,0.9); }
+.orb.medium { box-shadow: 0 0 50px rgba(245,158,11,0.9); }
+.orb.safe { box-shadow: 0 0 50px rgba(34,197,94,0.9); }
+
+/* ===== GRAPH PODS ===== */
+.graph-pod {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 32px;
+
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 60%),
+    rgba(2,6,23,0.9);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.85),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+
+  transform: perspective(1400px) rotateX(6deg);
+}
+
+.graph-pod h2 {
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+
+
+/* ===== SEARCH BAR (POWERBI / FLYHYER STYLE) ===== */
+.search-wrapper {
+  width: 420px;
+  margin: 24px 0 40px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 18px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+
+  transform: perspective(900px) translateZ(20px);
+}
+
+.search-icon {
+  font-size: 16px;
+  opacity: 0.75;
+}
+
+.tablet-search {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+.tablet-search::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.search-wrapper:focus-within {
+  box-shadow:
+    0 0 40px rgba(56, 189, 248, 0.45),
+    0 20px 50px rgba(0, 0, 0, 0.8),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}

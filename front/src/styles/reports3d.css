@@ -1,0 +1,69 @@
+.powerbi-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #020617;
+  color: white;
+}
+
+.powerbi-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* KPI STRIP */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.kpi-card {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+  font-size: 14px;
+}
+
+/* TILES */
+.tile {
+  background: linear-gradient(165deg, #0b1224, #020617);
+  border-radius: 22px;
+  padding: 22px;
+  margin-bottom: 28px;
+
+  box-shadow:
+    0 50px 100px rgba(0,0,0,0.9),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+
+  transform: perspective(1400px) rotateX(4deg);
+}
+
+.tile h2 {
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+.tile.hero {
+  transform: perspective(1400px) rotateX(2deg);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.tile.wide {
+  transform: perspective(1400px) rotateX(3deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .kpi-row,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}

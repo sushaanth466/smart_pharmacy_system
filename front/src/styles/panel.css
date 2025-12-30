@@ -1,0 +1,20 @@
+.panel-3d {
+  background: var(--color-bg-light);
+box-shadow:
+  0 50px 110px var(--color-shadow),
+  0 20px 40px var(--color-shadow);
+color: var(--color-text-light);
+
+  padding: 20px;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transform: translateZ(0);
+  transition: transform 0.25s ease;
+}
+
+.panel-3d:hover {
+  transform: translateY(-4px);
+}

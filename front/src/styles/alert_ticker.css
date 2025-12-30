@@ -1,0 +1,64 @@
+/* OUTER WRAPPER (keeps it safe in 3D layout) */
+.alert-ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* MAIN STRIP */
+.alert-ticker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: linear-gradient(180deg, #000000, #0b0b0b);
+  color: #ffffff;
+
+  padding: 10px 16px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 12px 30px rgba(0,0,0,0.7);
+}
+
+/* NEW BADGE */
+.alert-badge {
+  background: radial-gradient(circle at top, #ff4d4d, #b30000);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+
+  padding: 4px 10px;
+  border-radius: 6px;
+
+  box-shadow:
+    0 0 10px rgba(255,0,0,0.9),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+/* MARQUEE ZONE */
+.alert-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+
+/* MOVING TEXT */
+.alert-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: tickerMove 22s linear infinite;
+
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+/* ANIMATION */
+@keyframes tickerMove {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,135 @@
+/* ===== SIDEBAR BASE ===== */
+.sidebar-3d {
+  width: 84px;               /* compact */
+  height: 100vh;
+  padding: 18px 10px;
+
+  background: linear-gradient(180deg, #020617, #020617);
+
+  box-shadow:
+    inset -25px 0 50px rgba(0,0,0,0.9),
+    15px 0 40px rgba(0,0,0,0.6);
+
+  display: flex;
+  flex-direction: column;
+
+  transition: width 0.35s ease;
+}
+
+/* EXPAND ONLY ON LOGO HOVER */
+.sidebar-3d:hover {
+  width: 240px;
+}
+
+/* ===== LOGO ===== */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+
+  margin-bottom: 36px;
+  padding: 10px 12px;
+
+  border-radius: 14px;
+}
+
+/* LOGO TEXT HIDDEN */
+.sidebar-logo span {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+/* LOGO TEXT POPS */
+.sidebar-3d:hover .sidebar-logo span {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== NAV ===== */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== ITEM ===== */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #9ca3af;
+  text-decoration: none;
+
+  padding: 12px;
+  border-radius: 14px;
+
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* ICON */
+.nav-item svg {
+  font-size: 18px;
+  min-width: 18px;
+}
+
+/* LABEL */
+.nav-item span {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+}
+
+/* SHOW LABELS WHEN SIDEBAR EXPANDS */
+.sidebar-3d:hover .nav-item span {
+  opacity: 1;
+}
+
+/* HOVER */
+.nav-item:hover {
+  color: white;
+  background: rgba(255,255,255,0.06);
+}
+
+/* ACTIVE */
+.nav-item.active {
+  color: white;
+  background: rgba(99,102,241,0.18);
+}
+
+/* SEPARATOR */
+.nav-item.space {
+  margin-top: 18px;
+}
+
+
+.sidebar-3d {
+  background: var(--color-bg-light);
+  box-shadow:
+    inset -25px 0 50px var(--color-shadow),
+    15px 0 40px var(--color-shadow);
+}
+
+.sidebar-logo {
+  color: var(--color-secondary);
+}
+
+.nav-item {
+  color: var(--color-text-muted);
+}
+.nav-item:hover {
+  background: rgba(255,255,255,0.08);
+}
+.nav-item.active {
+  background: var(--color-primary);
+  color: white;
+}
+.nav-item.active::before {
+  background: var(--color-accent);
+}
